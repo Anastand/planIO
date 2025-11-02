@@ -1,5 +1,5 @@
 {
-  "name": "planIO",
+  "name": "planio",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -9,13 +9,14 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "@types/node": "^22.18.13",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
     "turbo": "^2.6.0",
     "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@10.16.0",
   "engines": {
     "node": ">=18"
   },

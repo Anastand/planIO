@@ -1,8 +1,9 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
-  "main": "./dist/index.js",
+   "main": "./dist/index.js",
   "scripts": {
     "start": "node ./dist/index.js",
     "dev": "nodemon index.ts",
@@ -11,7 +12,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^22.15.3"
-  }
+  "packageManager": "pnpm@10.16.0"
 }
