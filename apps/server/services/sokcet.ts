@@ -1,12 +1,10 @@
 import { Server } from "socket.io";
 
-{
-  /* 
+/* 
   this file is used to initialize the socket io 
   _io --> instance variable 
 
-  */
-}
+*/
 
 class socketService {
   // class allows to create new instance without writting the same code
@@ -16,8 +14,8 @@ class socketService {
     this._io = new Server();
   }
 
-  get io() {
-    // this is so that private vairabele _io can be accessed ad io outside , TODO: what more benifit is still unkonwn
+  get io() {// aslo a getter fucntion
+    // this is so that private vairabele _io can be accessed  outside , TODO: what more benifit is still unkonwn
     return this._io;
   }
 
@@ -34,11 +32,11 @@ class socketService {
     });
   }
 }
-{
-  /*
-  TODO: 1. get fronend here , 2. add more comments to explain what was done
+/*
+  TODO : 1. get fronend here 
+  TODO : 2. add more comments to explain what was done
+  TODO : 3. 
   
-  */
-}
+*/
 
 export default socketService;
