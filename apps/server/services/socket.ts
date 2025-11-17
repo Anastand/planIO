@@ -15,7 +15,7 @@ class socketService {
 
   get io() {
     // aslo a getter fucntion
-    // this is so that private vairabele _io can be accessed  outside , TODO: what more benifit is still unkonwn
+    // this is so that private vairabele _io can be accessed  outside and also by other fucntions  , TODO: what more benifit is still unkonwn
     return this._io;
   }
 
@@ -24,7 +24,7 @@ class socketService {
     console.log("init listener available >>>...");
     io.on("connect", (socket) => {
       // 'socket' is specific to the newly- uniqe -connected client
-      console.log(`new connection established `, socket.id);
+      console.log(`new socket connection established `, socket.id);
       socket.on("event:message", async ({ message }: { message: String }) => {
         // now a event listener is esatblished for the uniqe connected client
         console.log(`New Message, ${message}`);
