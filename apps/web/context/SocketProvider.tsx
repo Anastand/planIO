@@ -78,7 +78,7 @@ export const SocketProvider: React.FC<socketProviderTypes> = ({ children }) => {
     setmessage((prev) => [...prev, { text: message, username }]);
   }, []);
   useEffect(() => {
-    const _socket = io("http://localhost:8080"); // connect to backedn
+    const _socket = io("https://realtimechat-9f7k.onrender.com"); // connect to backedn
     _socket.on("message", onMessageReceive);
     setmsgsocket(_socket); // hold the connection string so that it can be used
     return () => {
