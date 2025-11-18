@@ -31,16 +31,19 @@ class socketService {
     io.on("connect", (socket) => {
       // 'socket' is specific to the newly- uniqe -connected client
       console.log(`new socket connection established `, socket.id);
-      socket.on("event:message", async ({ message }: { message: String }) => {
-        // now a event listener is esatblished for the uniqe connected client
-        console.log(`New Message, ${message}`);
-        await pub.publish("message", JSON.stringify({ message }));
-      });
+      socket.on(
+        "event:message",
+        async (data: { message: string; username: string }) => {
+          // Properly relay both fields
+          console.log(`New Message`, data);
+          await pub.publish("message", JSON.stringify(data));
+        }
+      );
     });
 
     sub.on("message", (channel, message) => {
       if (channel == "message") {
-        io.emit("message", message );
+        io.emit("message", message);
       }
     });
   }
